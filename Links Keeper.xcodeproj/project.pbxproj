@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1546A5771705501D00021E42 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1546A5761705501D00021E42 /* Cocoa.framework */; };
+		1546A5811705501D00021E42 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1546A57F1705501D00021E42 /* InfoPlist.strings */; };
+		1546A5831705501D00021E42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1546A5821705501D00021E42 /* main.m */; };
+		1546A5871705501D00021E42 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1546A5851705501D00021E42 /* Credits.rtf */; };
+		1546A58A1705501D00021E42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1546A5891705501D00021E42 /* AppDelegate.m */; };
+		1546A58D1705501D00021E42 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1546A58B1705501D00021E42 /* MainMenu.xib */; };
+		1546A595170562B600021E42 /* LinkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1546A594170562B600021E42 /* LinkData.m */; };
+		1597004617064D1700CC53D1 /* add.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1597004217064D1700CC53D1 /* add.icns */; };
+		1597004717064D1700CC53D1 /* clipboard.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1597004317064D1700CC53D1 /* clipboard.icns */; };
+		1597004817064D1700CC53D1 /* open.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1597004417064D1700CC53D1 /* open.icns */; };
+		1597004917064D1700CC53D1 /* remove.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1597004517064D1700CC53D1 /* remove.icns */; };
+		159C8448173C66AD005B1D16 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 159C8447173C66AD005B1D16 /* readme.md */; };
+		15AAF5D3170575C80082EC5B /* icon_1024.icns in Resources */ = {isa = PBXBuildFile; fileRef = 15AAF5D2170575C80082EC5B /* icon_1024.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1546A5731705501D00021E42 /* Links Keeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Links Keeper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1546A5761705501D00021E42 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1546A5791705501D00021E42 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1546A57A1705501D00021E42 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1546A57B1705501D00021E42 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1546A57E1705501D00021E42 /* Links Keeper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Links Keeper-Info.plist"; sourceTree = "<group>"; };
+		1546A5801705501D00021E42 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1546A5821705501D00021E42 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1546A5841705501D00021E42 /* Links Keeper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Links Keeper-Prefix.pch"; sourceTree = "<group>"; };
+		1546A5861705501D00021E42 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		1546A5881705501D00021E42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1546A5891705501D00021E42 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1546A58C1705501D00021E42 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1546A593170562B600021E42 /* LinkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkData.h; sourceTree = "<group>"; };
+		1546A594170562B600021E42 /* LinkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkData.m; sourceTree = "<group>"; };
+		1597004217064D1700CC53D1 /* add.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = add.icns; sourceTree = "<group>"; };
+		1597004317064D1700CC53D1 /* clipboard.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = clipboard.icns; sourceTree = "<group>"; };
+		1597004417064D1700CC53D1 /* open.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = open.icns; sourceTree = "<group>"; };
+		1597004517064D1700CC53D1 /* remove.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = remove.icns; sourceTree = "<group>"; };
+		159C8447173C66AD005B1D16 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = SOURCE_ROOT; };
+		15AAF5D2170575C80082EC5B /* icon_1024.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon_1024.icns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1546A5701705501D00021E42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1546A5771705501D00021E42 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1546A56A1705501D00021E42 = {
+			isa = PBXGroup;
+			children = (
+				15AAF5D2170575C80082EC5B /* icon_1024.icns */,
+				1546A57C1705501D00021E42 /* Links Keeper */,
+				1546A5751705501D00021E42 /* Frameworks */,
+				1546A5741705501D00021E42 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1546A5741705501D00021E42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1546A5731705501D00021E42 /* Links Keeper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1546A5751705501D00021E42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1546A5761705501D00021E42 /* Cocoa.framework */,
+				1546A5781705501D00021E42 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1546A5781705501D00021E42 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1546A5791705501D00021E42 /* AppKit.framework */,
+				1546A57A1705501D00021E42 /* CoreData.framework */,
+				1546A57B1705501D00021E42 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1546A57C1705501D00021E42 /* Links Keeper */ = {
+			isa = PBXGroup;
+			children = (
+				159C8446173C6530005B1D16 /* Images */,
+				1546A5881705501D00021E42 /* AppDelegate.h */,
+				1546A5891705501D00021E42 /* AppDelegate.m */,
+				1546A58B1705501D00021E42 /* MainMenu.xib */,
+				1546A57D1705501D00021E42 /* Supporting Files */,
+				1546A593170562B600021E42 /* LinkData.h */,
+				1546A594170562B600021E42 /* LinkData.m */,
+			);
+			path = "Links Keeper";
+			sourceTree = "<group>";
+		};
+		1546A57D1705501D00021E42 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1546A57E1705501D00021E42 /* Links Keeper-Info.plist */,
+				1546A57F1705501D00021E42 /* InfoPlist.strings */,
+				1546A5821705501D00021E42 /* main.m */,
+				1546A5841705501D00021E42 /* Links Keeper-Prefix.pch */,
+				1546A5851705501D00021E42 /* Credits.rtf */,
+				159C8447173C66AD005B1D16 /* readme.md */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		159C8446173C6530005B1D16 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1597004217064D1700CC53D1 /* add.icns */,
+				1597004317064D1700CC53D1 /* clipboard.icns */,
+				1597004417064D1700CC53D1 /* open.icns */,
+				1597004517064D1700CC53D1 /* remove.icns */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1546A5721705501D00021E42 /* Links Keeper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1546A5901705501D00021E42 /* Build configuration list for PBXNativeTarget "Links Keeper" */;
+			buildPhases = (
+				1546A56F1705501D00021E42 /* Sources */,
+				1546A5701705501D00021E42 /* Frameworks */,
+				1546A5711705501D00021E42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Links Keeper";
+			productName = "Links Keeper";
+			productReference = 1546A5731705501D00021E42 /* Links Keeper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1546A56B1705501D00021E42 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Bruno Philipe";
+			};
+			buildConfigurationList = 1546A56E1705501D00021E42 /* Build configuration list for PBXProject "Links Keeper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1546A56A1705501D00021E42;
+			productRefGroup = 1546A5741705501D00021E42 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1546A5721705501D00021E42 /* Links Keeper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1546A5711705501D00021E42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1546A5811705501D00021E42 /* InfoPlist.strings in Resources */,
+				1546A5871705501D00021E42 /* Credits.rtf in Resources */,
+				1546A58D1705501D00021E42 /* MainMenu.xib in Resources */,
+				15AAF5D3170575C80082EC5B /* icon_1024.icns in Resources */,
+				1597004617064D1700CC53D1 /* add.icns in Resources */,
+				1597004717064D1700CC53D1 /* clipboard.icns in Resources */,
+				1597004817064D1700CC53D1 /* open.icns in Resources */,
+				1597004917064D1700CC53D1 /* remove.icns in Resources */,
+				159C8448173C66AD005B1D16 /* readme.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1546A56F1705501D00021E42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1546A5831705501D00021E42 /* main.m in Sources */,
+				1546A58A1705501D00021E42 /* AppDelegate.m in Sources */,
+				1546A595170562B600021E42 /* LinkData.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1546A57F1705501D00021E42 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1546A5801705501D00021E42 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1546A5851705501D00021E42 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1546A5861705501D00021E42 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		1546A58B1705501D00021E42 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1546A58C1705501D00021E42 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1546A58E1705501D00021E42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1546A58F1705501D00021E42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1546A5911705501D00021E42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Links Keeper/Links Keeper-Prefix.pch";
+				INFOPLIST_FILE = "Links Keeper/Links Keeper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1546A5921705501D00021E42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Links Keeper/Links Keeper-Prefix.pch";
+				INFOPLIST_FILE = "Links Keeper/Links Keeper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1546A56E1705501D00021E42 /* Build configuration list for PBXProject "Links Keeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1546A58E1705501D00021E42 /* Debug */,
+				1546A58F1705501D00021E42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1546A5901705501D00021E42 /* Build configuration list for PBXNativeTarget "Links Keeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1546A5911705501D00021E42 /* Debug */,
+				1546A5921705501D00021E42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1546A56B1705501D00021E42 /* Project object */;
+}
