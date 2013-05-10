@@ -5,8 +5,11 @@ Open source url/bookmarks keeper for Mac. The app is also able to export the lin
 
 Screenshots
 -----------
-
 ![Screenshot](http://brunophilipe.com/public/images/ext_linkskeeper_1.png "Screenshot")
+
+About the Icons
+---------------
+Despite the similarities with Mac OS X default icons, the icons used in this App were created by Bruno Philipe as well, and are subject to the same license.
 
 Copyright
 =========
