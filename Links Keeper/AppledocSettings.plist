@@ -26,6 +26,8 @@
 	<true/>
 	<key>--merge-category-comment</key>
 	<false/>
+	<key>--repeat-first-par</key>
+	<false/>
 	<key>--logformat</key>
 	<integer>1</integer>
 </dict>

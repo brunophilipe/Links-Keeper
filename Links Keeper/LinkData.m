@@ -31,6 +31,10 @@
 	return ld;
 }
 
+/**
+ Instantiates the object with the data from the coder. Used for de-serialization.
+ @param aDecoder The decoder containing the serialized data for the instance.
+ */
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
 	self = [super init];
@@ -41,12 +45,14 @@
 	return self;
 }
 
+/**
+ Sets the instance variables from the object into the coder. Used for serialization.
+ @param aCoder The coder to insert the data.
+ */
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
 	[aCoder encodeObject:self.name forKey:@"name"];
 	[aCoder encodeObject:self.url forKey:@"url"];
 }
-
-
 
 @end

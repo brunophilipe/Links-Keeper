@@ -26,6 +26,11 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSURL *url;
 
+/**
+ Allocates and instantiates an object of LinkData class and sets its name and URL to the parameters values.
+ @param name The Link display-name.
+ @param url The URL for the link.
+ */
 + (LinkData *)linkDataWithName:(NSString *)name andURL:(NSURL *)url;
 
 @end

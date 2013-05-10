@@ -42,6 +42,11 @@
 	[self.button_clipboard setEnabled:NO];
 }
 
+/**
+ Validates the string using `-validateUrl:`. If it passes the test, creates an `NSURL` object and initializes it with the parameter string as URL.
+ @param attempt The string to be tested and used.
+ @returns An NSURL instance if `attempt` is valid. Otherwise returns `nil`.
+ */
 - (NSURL *)trySettingUpURLWithString:(NSString *)attempt
 {
 	if ([self validateUrl:attempt]) {
@@ -59,12 +64,22 @@
 	}
 }
 
+/**
+ Verifies if the provided URL is valid for instantiating a `NSURL` object. Currently supports http, https and ftp protocol only.
+ @param url The string to be verified as URL.
+ @returns `YES` if string is valid, otherwise returns `NO`.
+ */
 - (BOOL)validateUrl:(NSString *)url {
 	NSString *theURL = @"^(http|https|ftp)\\://[a-zA-Z0-9\\-\\.]+\\.[a-zA-Z]{2,3}(:[a-zA-Z0-9]*)?/?([a-zA-Z0-9\\-\\._\\?\\,\'/\\\\\\+&amp;%\\$#\\=~])*$";
 	NSPredicate *urlTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", theURL];
 	return [urlTest evaluateWithObject:url];
 }
 
+/**
+ Finds and creates if necessary the Application Support folder for the App. By default it is placed in `"~/Library/Application Support/Links Keeper/"`.
+ 
+ @returns The App Support folder path as a string.
+ */
 - (NSString *)appSupportFolder {
 	NSString *libDir;
 
@@ -80,6 +95,13 @@
 	return libDir;
 }
 
+/**
+ Serializes the data from the `storedLinks` variable and stores it on a custom file in the Application Support folder.
+ 
+ The file is saved in `"~/Library/Application Support/Links Keeper/links.plist"`.
+ 
+ This method also makes the activity indicator on the status bar visible. After finished, it calls `-animateSavedLabel` to make it stop using a graceful animation.
+ */
 - (void)saveDataToFile
 {
 	[self.progressIndicator setHidden:NO];
@@ -90,6 +112,9 @@
 	[self performSelector:@selector(animateSavedLabel) withObject:nil afterDelay:0.5];
 }
 
+/**
+ Stops and hides the activity indicator in the status bar using core animations.
+ */
 - (void)animateSavedLabel
 {
 	[self.progressIndicator stopAnimation:self];
@@ -101,6 +126,9 @@
 	[block performSelector:@selector(start) withObject:nil afterDelay:0.5];
 }
 
+/**
+ Reads the contents of the file in the Application Support folder and unserializes it.
+ */
 - (void)readDataFromFile
 {
 	[self.progressIndicator startAnimation:self];
@@ -111,6 +139,9 @@
 	[self.progressIndicator performSelector:@selector(stopAnimation:) withObject:self afterDelay:0.5];
 }
 
+/**
+ Updates the link counter on the status bar.
+ */
 - (void)updateLinksCount
 {
 	NSInteger count = [storedLinks count];
