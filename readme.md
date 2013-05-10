@@ -3,6 +3,10 @@ Links Keeper
 
 Open source url/bookmarks keeper for Mac. The app is also able to export the links to a file and import from it again. Useful to share multiple links.
 
+Screenshots
+-----------
+
+![Screenshot](http://brunophilipe.com/public/images/ext_linkskeeper_1.png "Screenshot")
 
 Copyright
 =========
