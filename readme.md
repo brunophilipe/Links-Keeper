@@ -15,6 +15,12 @@ Download
 ========
 Download the compiled version from the last productive commit (0a1f83312f) from the following link: [download](http://brunophilipe.com/software/linkskeeper_0a1f83312f.zip)
 
+To-Do
+=====
+These features are going to be added on future versions. If you have any idea, just send me a message, or (maybe) fork the project and implement it yourself :D
+
+* Add capability to import links from human-writable text file
+
 Copyright
 =========
 >	Copyright (C) 2013 Bruno Philipe
