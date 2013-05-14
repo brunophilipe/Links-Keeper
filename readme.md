@@ -11,6 +11,10 @@ About the Icons
 ---------------
 Despite the similarities with Mac OS X default icons, the icons used in this App were created by Bruno Philipe as well, and are subject to the same license.
 
+Download
+========
+Download the compiled version from the last productive commit (0a1f83312f) from the following link: [download](http://brunophilipe.com/software/linkskeeper_0a1f83312f.zip)
+
 Copyright
 =========
 >	Copyright (C) 2013 Bruno Philipe
