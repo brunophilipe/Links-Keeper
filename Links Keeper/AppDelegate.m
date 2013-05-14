@@ -30,7 +30,8 @@
 {
 	// Insert code here to initialize your application
 	[self readDataFromFile];
-	if (!storedLinks) {
+	if (!storedLinks)
+	{
 		storedLinks = [[NSMutableArray alloc] init];
 	}
 
@@ -49,10 +50,13 @@
  */
 - (NSURL *)trySettingUpURLWithString:(NSString *)attempt
 {
-	if ([self validateUrl:attempt]) {
+	if ([self validateUrl:attempt])
+	{
 		NSURL *result = [[NSURL alloc] initWithString:attempt];
 		return result;
-	} else {
+	}
+	else
+	{
 		NSAlert *alert = [NSAlert alertWithMessageText:@"Error"
 										 defaultButton:@"OK"
 									   alternateButton:nil
@@ -69,7 +73,8 @@
  @param url The string to be verified as URL.
  @returns `YES` if string is valid, otherwise returns `NO`.
  */
-- (BOOL)validateUrl:(NSString *)url {
+- (BOOL)validateUrl:(NSString *)url
+{
 	NSString *theURL = @"^(http|https|ftp)\\://[a-zA-Z0-9\\-\\.]+\\.[a-zA-Z]{2,3}(:[a-zA-Z0-9]*)?/?([a-zA-Z0-9\\-\\._\\?\\,\'/\\\\\\+&amp;%\\$#\\=~])*$";
 	NSPredicate *urlTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", theURL];
 	return [urlTest evaluateWithObject:url];
@@ -80,12 +85,14 @@
  
  @returns The App Support folder path as a string.
  */
-- (NSString *)appSupportFolder {
+- (NSString *)appSupportFolder
+{
 	NSString *libDir;
 
 	libDir = [[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"Application Support/Links Keeper/"];
 
-	if (![[NSFileManager defaultManager] fileExistsAtPath:libDir]) {
+	if (![[NSFileManager defaultManager] fileExistsAtPath:libDir])
+	{
 		#ifdef DEBUG
 		NSLog(@"Creating Application Support Folder");
 		#endif
@@ -161,7 +168,7 @@
 							defaultButton:@"OK"
 						  alternateButton:@"Cancel"
 							  otherButton:nil
-				informativeTextWithFormat:@""];
+				informativeTextWithFormat:@"If there is a link on your clipboard, Links Keeper places it below automatically."];
 	[[alert window] setTitle:@"Links Keeper"];
 
 	//Build input view
@@ -178,7 +185,7 @@
 
 	//If clipboard contains a link, put it in the URL field
 	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
-	NSArray *classes = [[NSArray alloc] initWithObjects:[NSString class], nil];
+	NSArray *classes = @[[NSString class]];
 	NSDictionary *options = [NSDictionary dictionary];
 	NSArray *copiedItems = [pasteboard readObjectsForClasses:classes options:options];
 	if (copiedItems != nil && copiedItems.count > 0 && [self validateUrl:[copiedItems objectAtIndex:0]]) {
@@ -256,7 +263,7 @@
 	[saveDlg setCanCreateDirectories:YES];
 	[saveDlg setCanSelectHiddenExtension:NO];
 	[saveDlg setExtensionHidden:YES];
-	[saveDlg setNameFieldStringValue:@"ExportedLinks.bxml"];
+	[saveDlg setNameFieldStringValue:@"ExportedLinks.bxml"]; //Binary XML
 
 	NSInteger returnValue = [saveDlg runModal];
 
@@ -271,7 +278,10 @@
 - (IBAction)importLinks:(id)sender {
 	NSAlert *alert = [NSAlert alertWithMessageText:@"Attention!" defaultButton:@"Continue" alternateButton:@"Cancel" otherButton:nil informativeTextWithFormat:@"Are you sure you want to continue? All your current links will be merged with the links from the file."];
 	[[alert window] setTitle:@"Links Keeper"];
-	if ([alert runModal] == 0) {
+	
+	if ([alert runModal] == 0)
+	{
+		//Alert view returned the "Cancel button pressed" status
 		return;
 	}
 	
@@ -285,6 +295,7 @@
 	
 	if (returnValue == 1)
 	{
+		//Open panel returned "OK button pressed" status
 		NSURL* file = [[openDlg URLs] objectAtIndex:0];
 		NSMutableArray *importedLinks = [NSKeyedUnarchiver unarchiveObjectWithFile:[file relativePath]];
 		for (LinkData *link in importedLinks) {
@@ -311,9 +322,12 @@
 
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
 {
-	if ([[aTableColumn identifier] isEqualToString:@"name"]) {
+	if ([[aTableColumn identifier] isEqualToString:@"name"])
+	{
 		return [(LinkData *)[storedLinks objectAtIndex:rowIndex] name];
-	} else {
+	}
+	else
+	{
 		return [[(LinkData *)[storedLinks objectAtIndex:rowIndex] url] absoluteString];
 	}
 }
@@ -327,7 +341,8 @@
 	NSInteger		editedColumn =		[tv editedColumn];
 	NSInteger		editedRow =			[tv editedRow];
 
-	switch (editedColumn) {
+	switch (editedColumn)
+	{
 		case 0:
 		{
 			[(LinkData *)[storedLinks objectAtIndex:editedRow] setName:[field string]];
@@ -338,7 +353,8 @@
 		case 1:
 		{
 			NSURL *url = [self trySettingUpURLWithString:[field string]];
-			if (url) {
+			if (url)
+			{
 				[(LinkData *)[storedLinks objectAtIndex:editedRow] setUrl:url];
 				[self saveDataToFile];
 			}
@@ -352,6 +368,9 @@
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification
 {
+	/*
+	 Changes the enabled status for the Toolbar buttons. "Delete Link" button should not be enabled if there are no links selected.
+	 */
 	NSInteger selectedRow = [self.linksTableView selectedRow];
 	if (selectedRow < 0)
 	{
